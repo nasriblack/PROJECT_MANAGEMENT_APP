@@ -4,7 +4,7 @@ import { Project, Task } from "./types";
 export const api = createApi({
     reducerPath: "api",
     tagTypes: ["Projects", "Tasks"],
-    baseQuery: fetchBaseQuery({ baseUrl: process.env.NEXT_PUBLIC_API_URL }),
+    baseQuery: fetchBaseQuery({ baseUrl: process.env.NEXT_PUBLIC_API_BASE_URL }),
     endpoints: (build) => ({
         getProjects: build.query<Project[], void>({
             query: () => ({
