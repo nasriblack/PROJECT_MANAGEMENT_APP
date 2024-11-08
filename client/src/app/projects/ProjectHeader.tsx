@@ -42,6 +42,7 @@ const ProjectHeader = ({ activeTab, setActiveTab }: Props) => {
       {/* TABS */}
       <div className="flex flex-wrap-reverse gap-2 border-y border-gray-200 pb-[8px] pt-2 dark:border-stroke-dark md:items-center">
         <div className="flex flex-1 items-center gap-2 md:gap-4">
+          {/* TODO: add the TabButton on array and map through it  */}
           <TabButton
             name="Board"
             icon={<Grid3x3 className="h-5 w-5" />}
@@ -67,6 +68,8 @@ const ProjectHeader = ({ activeTab, setActiveTab }: Props) => {
             activeTab={activeTab}
           />
         </div>
+
+        {/* TODO: add the icon and map through it */}
         <div className="flex items-center gap-2">
           <button className="text-gray-500 hover:text-gray-600 dark:text-neutral-500 dark:hover:text-gray-300">
             <Filter className="h-5 w-5" />

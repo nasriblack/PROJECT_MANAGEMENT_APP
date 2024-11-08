@@ -3,6 +3,7 @@
 import React, { useState } from "react";
 import ProjectHeader from "../ProjectHeader";
 import { useParams } from "next/navigation";
+import Board from "../BoardView";
 
 const Project = () => {
   const { id } = useParams();
@@ -13,7 +14,11 @@ const Project = () => {
     <div>
       <ProjectHeader activeTab={activeTab} setActiveTab={setActiveTab} />
       <>hello {id}</>
-      {/* <ModalNewTask
+      {activeTab === "Board" && (
+        <Board id={id} setIsModalNewTaskOpen={setIsModalNewTaskOpen} />
+      )}
+      {/* 
+      <ModalNewTask
         isOpen={isModalNewTaskOpen}
         onClose={() => setIsModalNewTaskOpen(false)}
         id={id}
