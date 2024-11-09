@@ -1,5 +1,5 @@
 import { createApi, fetchBaseQuery } from '@reduxjs/toolkit/query/react';
-import { Project, Task } from "./types";
+import { Project, SearchResults, Task } from "./types";
 
 export const api = createApi({
     reducerPath: "api",
@@ -45,6 +45,9 @@ export const api = createApi({
               { type: "Tasks", id: taskId },
             ],
           }), 
+          search: build.query<SearchResults, string>({
+            query: (query) => `search?query=${query}`,
+          }),
     }),
 });
 
@@ -52,6 +55,7 @@ export const {
     useGetProjectsQuery,
     useCreateProjectMutation,
     useGetTasksQuery,
+    useSearchQuery,
     useCreateTaskMutation,
     useUpdateTaskStatusMutation,
 } = api;

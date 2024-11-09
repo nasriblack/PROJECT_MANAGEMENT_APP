@@ -58,3 +58,8 @@ export interface Project {
     Completed = "Completed",
   }
   
+  export interface SearchResults {
+    tasks?: Task[];
+    projects?: Project[];
+    users?: User[];
+  }
