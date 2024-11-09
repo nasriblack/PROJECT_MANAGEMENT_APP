@@ -5,6 +5,7 @@ import ProjectHeader from "../ProjectHeader";
 import { useParams } from "next/navigation";
 import Board from "../BoardView";
 import List from "../ListView";
+import Timeline from "../TimelineView";
 
 const Project = () => {
   const { id } = useParams();
@@ -20,6 +21,9 @@ const Project = () => {
       )}
       {activeTab === "List" && (
         <List id={id} setIsModalNewTaskOpen={setIsModalNewTaskOpen} />
+      )}
+      {activeTab === "Timeline" && (
+        <Timeline id={id} setIsModalNewTaskOpen={setIsModalNewTaskOpen} />
       )}
       {/* 
       <ModalNewTask
