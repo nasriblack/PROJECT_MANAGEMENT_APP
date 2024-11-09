@@ -6,6 +6,7 @@ import { useParams } from "next/navigation";
 import Board from "../BoardView";
 import List from "../ListView";
 import Timeline from "../TimelineView";
+import Table from "../TableView";
 
 const Project = () => {
   const { id } = useParams();
@@ -15,7 +16,6 @@ const Project = () => {
   return (
     <div>
       <ProjectHeader activeTab={activeTab} setActiveTab={setActiveTab} />
-      <>hello {id}</>
       {activeTab === "Board" && (
         <Board id={id} setIsModalNewTaskOpen={setIsModalNewTaskOpen} />
       )}
@@ -24,6 +24,9 @@ const Project = () => {
       )}
       {activeTab === "Timeline" && (
         <Timeline id={id} setIsModalNewTaskOpen={setIsModalNewTaskOpen} />
+      )}
+      {activeTab === "Table" && (
+        <Table id={id} setIsModalNewTaskOpen={setIsModalNewTaskOpen} />
       )}
       {/* 
       <ModalNewTask

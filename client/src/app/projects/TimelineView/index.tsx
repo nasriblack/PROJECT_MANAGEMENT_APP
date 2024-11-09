@@ -5,7 +5,7 @@ import "gantt-task-react/dist/index.css";
 import React, { useMemo, useState } from "react";
 
 type Props = {
-  id: string;
+  id: string | string[] | undefined;
   setIsModalNewTaskOpen: (isOpen: boolean) => void;
 };
 
