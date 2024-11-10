@@ -7,7 +7,7 @@ import { Priority, Status } from "@/app/state/types";
 type Props = {
   isOpen: boolean;
   onClose: () => void;
-  id: string | string[] | undefined;
+  id?: string | string[] | undefined;
 };
 
 const ModalNewTask = ({ isOpen, onClose, id = undefined }: Props) => {
