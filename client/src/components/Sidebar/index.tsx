@@ -48,7 +48,7 @@ const Sidebar = () => {
         {/* LOGO */}
         <div className="z-50 flex min-h-[56px] w-64 items-center justify-between bg-white px-6 pt-3 dark:bg-black">
           <div className="text-xl font-bold text-gray-800 dark:text-white">
-            EDLIST
+            BlaKCode
           </div>
           {isSidebarCollapsed ? null : (
             <button
